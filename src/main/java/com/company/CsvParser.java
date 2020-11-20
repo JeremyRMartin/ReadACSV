@@ -47,10 +47,13 @@ public class CsvParser {
       for (String fields : (String[]) row) {
         System.out.print(fields + ",");
       }
-      System.out.println("\b\b\n--------------------------");
+      printCsvLine();
     }
   }
 
+  private void printCsvLine(){
+    System.out.println("\b\b\n--------------------------");
+  }
   private boolean checkFile(String csvfile) {
     /** checkFile - checks to ensure the file exists
      * @return false on file not found, true on found
